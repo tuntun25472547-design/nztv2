@@ -1,0 +1,1592 @@
+
+<!-- ✅ แสดงรูปภาพ -->
+<img
+  src="https://i.postimg.cc/QxcR5D2Y/photo-2026-01-28-12-27-57.jpg"
+  alt="image"
+  class="show-img"
+/>
+
+<style>
+  .show-img{
+    width: min(720px, 100%);
+    height: auto;
+    display: block;
+    margin: 14px auto;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,.18);
+    box-shadow: 0 16px 40px rgba(0,0,0,.55);
+    background: rgba(255,255,255,.06);
+  }
+</style>
+
+<!-- แถบปุ่มล่างสุด (ติดจอ) -->
+<div class="sticky-bar">
+  <a class="sticky-btn signup"
+     href="https://m.nzt99.com/"
+     target="_blank" rel="noopener"
+     onclick="if (typeof fbq === 'function') fbq('track', 'Lead');">
+    สมัครอัตโนมัติ
+  </a>
+
+  <a class="sticky-btn line"
+     href="https://line.me/R/ti/p/@846qbuez?ts=01251840&oat_content=url"
+     target="_blank" rel="noopener">
+    ติดต่อแอดมิน
+  </a>
+</div>
+
+<style>
+  /* กันแถบล่างบังเนื้อหา */
+  body{ padding-bottom: 92px; }
+
+  .sticky-bar{
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 999999;
+    padding: 10px 12px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    background: rgba(0,0,0,.72);
+    border-top: 1px solid rgba(255,255,255,.12);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .sticky-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height: 56px;
+
+    border-radius: 16px;
+    font-weight: 1000;
+    font-size: 16px;
+    text-decoration: none;
+    user-select:none;
+    -webkit-tap-highlight-color: transparent;
+
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+
+  .sticky-btn:active{ transform: scale(.98); }
+
+  /* ปุ่มสมัคร (เขียวมิ้นท์/แสงขาว) */
+  .sticky-btn.signup{
+    background: linear-gradient(180deg, #BFF7EA 0%, #4FE1C8 55%, #20BBA6 100%);
+    color:#07110e;
+    border: 2px solid rgba(255,255,255,.85);
+    box-shadow:
+      0 0 10px rgba(255,255,255,.35),
+      0 0 22px rgba(255,255,255,.22),
+      0 10px 24px rgba(0,0,0,.35);
+  }
+
+  .sticky-btn.signup:hover{
+    box-shadow:
+      0 0 14px rgba(255,255,255,.50),
+      0 0 30px rgba(255,255,255,.28),
+      0 12px 30px rgba(0,0,0,.45);
+  }
+
+  /* ปุ่มไลน์ */
+  .sticky-btn.line{
+    background: #00C300;
+    color:#fff;
+    box-shadow:
+      0 0 14px rgba(0,195,0,.35),
+      0 10px 24px rgba(0,0,0,.35);
+  }
+
+  .sticky-btn.line:hover{
+    box-shadow:
+      0 0 22px rgba(0,255,0,.45),
+      0 12px 30px rgba(0,0,0,.45);
+  }
+
+  /* มือถือจอเล็ก: ปุ่มสูงน้อยลง/ตัวหนังสือใหญ่ขึ้นนิดให้กดง่าย */
+  @media (max-width: 480px){
+    body{ padding-bottom: 86px; }
+    .sticky-btn{ height: 54px; font-size: 16px; }
+    .sticky-bar{ padding: 10px; gap: 10px; }
+  }
+</style>
+
+<!-- โลโก้มุมขวาบน (ติดตลอด + กดได้) -->
+<a href="https://m.nzt99.com/" class="sticky-logo" target="_blank" rel="noopener">
+  <img src="https://i.postimg.cc/QNnJrzbN/Logo-NZT99.webp" alt="NZT99">
+</a>
+
+<style>
+  .sticky-logo{
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 999999;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* แต่งกรอบให้ดูเนียน */
+    padding: 8px;
+    border-radius: 14px;
+    background: rgba(0,0,0,.25);
+    border: 1px solid rgba(255,255,255,.18);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow:
+      0 10px 30px rgba(0,0,0,.45),
+      0 0 18px rgba(255,255,255,.12);
+
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    text-decoration: none;
+  }
+
+  .sticky-logo img{
+    width: 72px;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+
+  .sticky-logo:hover{
+    transform: scale(1.03);
+    background: rgba(0,0,0,.35);
+    box-shadow:
+      0 12px 34px rgba(0,0,0,.55),
+      0 0 22px rgba(255,255,255,.18);
+  }
+
+  .sticky-logo:active{
+    transform: scale(.98);
+  }
+
+  /* มือถือให้เล็กลงนิด */
+  @media (max-width: 480px){
+    .sticky-logo{ top: 10px; right: 10px; padding: 7px; }
+    .sticky-logo img{ width: 58px; }
+  }
+</style>
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sale Page</title>
+
+  <style>
+    :root{
+      /* ✅ โทนเขียวอมฟ้าแบบรูป (ปรับได้ถ้าอยากเข้ม/อ่อน) */
+      --teal-1:#9FE9DA;
+      --teal-2:#46C9B0;
+      --teal-3:#1FAE95;
+
+      /* ทอง/เทาเดิมของรายการถอน */
+      --gold-1:#FFE08A;
+      --gold-2:#F6C54A;
+      --gold-3:#E2A92A;
+      --gray-1:#2a2a2a;
+      --gray-2:#111111;
+    }
+
+    body{
+      margin:0;
+      padding:18px;
+      background:#000;
+      color:#fff;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Thai", sans-serif;
+      text-align:center;
+    }
+
+    .wrap{ max-width:720px; margin:0 auto; }
+
+    /* ✅ หัวข้อสีทองเทาเท่ๆ (ตามเดิม) */
+    .title{
+      display:inline-block;
+      margin: 6px auto 16px;
+      padding: 10px 22px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, var(--gold-1) 0%, var(--gold-2) 55%, var(--gold-3) 100%);
+      color: #111;
+      font-weight: 1000;
+      font-size: 22px;
+      letter-spacing: .2px;
+      box-shadow:
+        0 10px 24px rgba(0,0,0,.55),
+        0 0 30px rgba(255,200,60,.55);
+      border: 1px solid rgba(255,255,255,.28);
+    }
+
+    /* ✅ ปุ่มสมัครอัตโนมัติ (เปลี่ยนสีเป็นเขียวอมฟ้า) */
+    .glow-button{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap: clamp(10px, 2.2vw, 16px);
+
+      width: 100%;
+      max-width: 720px;
+      margin: 14px auto 0;
+
+      padding: clamp(16px, 3.8vw, 28px) clamp(14px, 4.6vw, 40px);
+      border-radius: clamp(14px, 3.6vw, 18px);
+      text-decoration:none;
+
+      background: linear-gradient(180deg, var(--teal-1) 0%, var(--teal-2) 55%, var(--teal-3) 100%);
+      color:#0b1b16;
+
+      font-weight: 1000;
+      font-size: clamp(18px, 4.8vw, 26px);
+      line-height: 1.1;
+
+      border: 2px solid rgba(255,255,255,.95);
+      box-shadow:
+        0 0 10px rgba(255,255,255,.55),
+        0 0 22px rgba(255,255,255,.35),
+        0 0 40px rgba(255,255,255,.18),
+        0 12px 28px rgba(31,174,149,.30);
+
+      animation: pulse-white 1.8s infinite;
+      transition: transform .2s ease, box-shadow .2s ease;
+      user-select:none;
+      -webkit-tap-highlight-color: transparent;
+      box-sizing:border-box;
+    }
+
+    .glow-button:hover{
+      transform: scale(1.02);
+      box-shadow:
+        0 0 14px rgba(255,255,255,.70),
+        0 0 30px rgba(255,255,255,.50),
+        0 0 60px rgba(255,255,255,.28),
+        0 16px 34px rgba(31,174,149,.38);
+    }
+
+    .icon-left{
+      width: clamp(26px, 7vw, 40px);
+      height: clamp(26px, 7vw, 40px);
+      flex: 0 0 clamp(26px, 7vw, 40px);
+      filter: drop-shadow(0 0 8px rgba(255,255,255,.55));
+    }
+
+    @keyframes pulse-white{
+      0%{
+        box-shadow:
+          0 0 10px rgba(255,255,255,.45),
+          0 0 22px rgba(255,255,255,.28),
+          0 0 40px rgba(255,255,255,.14),
+          0 12px 28px rgba(31,174,149,.28);
+      }
+      50%{
+        box-shadow:
+          0 0 16px rgba(255,255,255,.75),
+          0 0 34px rgba(255,255,255,.55),
+          0 0 70px rgba(255,255,255,.30),
+          0 18px 40px rgba(31,174,149,.40);
+      }
+      100%{
+        box-shadow:
+          0 0 10px rgba(255,255,255,.45),
+          0 0 22px rgba(255,255,255,.28),
+          0 0 40px rgba(255,255,255,.14),
+          0 12px 28px rgba(31,174,149,.28);
+      }
+    }
+
+    /* ✅ ปุ่มไลน์ (จัดให้อยู่ตรงกลางแล้ว) */
+    .line-button{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap: 12px;
+
+      background:#00C300;
+      color:#fff;
+      font-weight: 1000;
+      font-size: clamp(18px, 4.8vw, 26px);
+      padding: clamp(16px, 3.4vw, 22px) clamp(14px, 4.6vw, 40px);
+      border-radius: 14px;
+      text-decoration:none;
+
+      box-shadow: 0 0 18px rgba(0,195,0,.70);
+      transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
+
+      width: 100%;
+      max-width: 520px;
+      margin: 14px auto 18px; /* ✅ center */
+      box-sizing:border-box;
+    }
+    .line-button:hover{
+      transform: scale(1.03);
+      box-shadow: 0 0 30px rgba(0,255,0,.85);
+    }
+    .line-icon{
+      width: clamp(26px, 7vw, 38px);
+      height: clamp(26px, 7vw, 38px);
+    }
+
+    /* ✅ รายการถอนเงิน */
+    #transaction-container{ display:grid; gap:12px; }
+
+    .card{
+      position:relative;
+      border-radius: 14px;
+      padding: 14px 14px;
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      overflow:hidden;
+      box-shadow: 0 18px 40px rgba(0,0,0,.55);
+      animation: fadeIn .35s ease;
+    }
+
+    .gold{
+      background: linear-gradient(45deg, #FFD700, #FFC300, #FFEA00);
+      color:#111;
+      box-shadow:
+        0 0 10px rgba(255,215,0,.55),
+        0 0 22px rgba(255,195,0,.35);
+    }
+    .gray{
+      background: linear-gradient(180deg, var(--gray-1), var(--gray-2));
+      color:#fff;
+      box-shadow:
+        0 0 14px rgba(255,255,255,.14),
+        0 0 28px rgba(255,255,255,.08);
+    }
+
+    @keyframes fadeIn{
+      from{ opacity:0; transform: translateY(10px); }
+      to{ opacity:1; transform: translateY(0); }
+    }
+
+    .bank{
+      width: 54px;
+      height: 54px;
+      border-radius: 999px;
+      overflow:hidden;
+      flex: 0 0 54px;
+      border: 2px solid rgba(255,255,255,.85);
+      background: rgba(255,255,255,.10);
+      box-shadow: 0 10px 22px rgba(0,0,0,.35);
+    }
+    .gold .bank{ border-color: rgba(255,255,255,.85); }
+    .gray .bank{ border-color: rgba(255,215,0,.55); }
+
+    .bank img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      display:block;
+    }
+
+    .details{
+      text-align:left;
+      flex:1;
+      min-width:0;
+      padding-right: 92px;
+      line-height: 1.55;
+      font-weight: 900;
+    }
+    .user{
+      white-space: nowrap;
+      overflow:hidden;
+      text-overflow: ellipsis;
+      font-size: 16px;
+    }
+    .amount{
+      font-size: 18px;
+      color:#19d16a;
+      font-weight: 1000;
+    }
+    .gold .amount{ color:#0a7a2e; }
+    .time{
+      font-size: 13px;
+      opacity: .85;
+      font-weight: 800;
+    }
+
+    .game-badge{
+      position:absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 64px;
+      height: 64px;
+      border-radius: 999px;
+      overflow:hidden;
+      background: rgba(255,255,255,.10);
+      border: 3px solid rgba(255,255,255,.85);
+      box-shadow: 0 12px 26px rgba(0,0,0,.50);
+    }
+    .gray .game-badge{ border-color: rgba(255,215,0,.55); }
+    .gold .game-badge{ border-color: rgba(255,255,255,.85); }
+
+    .game-badge img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      display:block;
+    }
+
+    @media (max-width:520px){
+      body{ padding:14px; }
+      .title{ font-size: 20px; }
+      .details{ padding-right: 84px; }
+      .game-badge{ width:58px; height:58px; }
+      .bank{ width:50px; height:50px; flex-basis:50px; }
+      .amount{ font-size: 17px; }
+    }
+
+    /* background mood */
+    body{
+      background:
+        radial-gradient(900px 480px at 15% 0%, rgba(31,174,149,.14), rgba(0,0,0,0)),
+        radial-gradient(700px 420px at 90% 15%, rgba(255,255,255,.08), rgba(0,0,0,0)),
+        #000 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- ✅ ปุ่มสมัคร (เขียวตามรูป) -->
+    <a href="https://m.nzt99.com/"
+       class="glow-button"
+       onclick="if (typeof fbq === 'function') fbq('track', 'Lead');"
+       target="_blank" rel="noopener">
+       <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="user" class="icon-left">
+       สมัครผ่านระบบอัตโนมัติ
+    </a>
+
+    <!-- ✅ ปุ่มไลน์ (อยู่กลาง) -->
+    <a href="https://line.me/R/ti/p/@846qbuez?ts=01251840&oat_content=url"
+       class="line-button"
+       target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg"
+           alt="LINE" class="line-icon">
+      <span class="line-text">ติดต่อแอดมิน</span>
+    </a>
+    
+    <!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>รายการถอนเงิน</title>
+<!-- ✅ แสดงรูปภาพ -->
+<img
+  src="https://i.postimg.cc/WzgW9DWC/photo_2026_01_26_19_15_23.jpg"
+  alt="image"
+  class="show-img"
+/>
+
+<style>
+  .show-img{
+    width: min(720px, 100%);
+    height: auto;
+    display: block;
+    margin: 14px auto; 
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,.18);
+    box-shadow: 0 16px 40px rgba(0,0,0,.55);
+    background: rgba(255,255,255,.06);
+  }
+</style>
+
+  <style>
+    :root{
+      /* โทนเดียวกับปุ่มเขียวมิ้นท์ */
+      --mint1:#BFF7EA;
+      --mint2:#4FE1C8;
+      --mint3:#20BBA6;
+      --mint4:#119784;
+
+      --dark:#0b0f0f;
+      --white:#ffffff;
+
+      --shadow: 0 18px 40px rgba(0,0,0,.55);
+      --glow: 0 0 18px rgba(255,255,255,.45);
+    }
+
+    body{
+      margin:0;
+      padding:18px;
+      background: #000;
+      color:#111;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Thai", sans-serif;
+      text-align:center;
+    }
+
+    .wrap{ max-width: 760px; margin: 0 auto; }
+
+    /* หัวข้อโทนมิ้นท์ */
+    .title{
+      display:inline-block;
+      margin: 6px auto 16px;
+      padding: 10px 22px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, var(--mint1) 0%, var(--mint2) 55%, var(--mint4) 100%);
+      color:#0b1a16;
+      font-weight: 1000;
+      font-size: 22px;
+      letter-spacing: .2px;
+      border: 2px solid rgba(255,255,255,.95);
+      box-shadow:
+        0 10px 24px rgba(0,0,0,.55),
+        0 0 26px rgba(255,255,255,.35);
+    }
+
+    #transaction-container{
+      display:grid;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .card{
+      position: relative;
+      border-radius: 16px;
+      padding: 14px 14px;
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      animation: fadeIn .35s ease;
+      border: 2px solid rgba(255,255,255,.85);
+      backdrop-filter: blur(6px);
+    }
+
+    /* ✅ สีการ์ดแบบใหม่:
+       - แทนช่องสีเหลือง -> ใช้โทนมิ้นท์เหมือนปุ่ม
+       - แทนช่องสีดำ -> เป็นสีขาว
+    */
+    .mint{
+      background: linear-gradient(90deg, var(--mint1), var(--mint2), var(--mint3));
+      color:#0b1a16;
+      box-shadow:
+        0 0 12px rgba(255,255,255,.40),
+        0 0 26px rgba(255,255,255,.22),
+        var(--shadow);
+    }
+
+    .white{
+      background: linear-gradient(180deg, #ffffff, #f3f6f7);
+      color:#0b0f0f;
+      box-shadow:
+        0 0 10px rgba(255,255,255,.18),
+        var(--shadow);
+    }
+
+    @keyframes fadeIn{
+      from{ opacity:0; transform: translateY(10px); }
+      to{ opacity:1; transform: translateY(0); }
+    }
+
+    /* รูปธนาคารซ้าย */
+    .bank{
+      width: 56px;
+      height: 56px;
+      border-radius: 999px;
+      overflow:hidden;
+      flex: 0 0 56px;
+      background: rgba(255,255,255,.25);
+      border: 2px solid rgba(255,255,255,.95);
+      box-shadow: 0 10px 22px rgba(0,0,0,.28);
+      animation: pulse 1.6s infinite ease-in-out;
+    }
+    .white .bank{
+      border-color: rgba(32,187,166,.65);
+      background: rgba(32,187,166,.08);
+    }
+
+    .bank img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      display:block;
+    }
+
+    @keyframes pulse{
+      0%{ transform: scale(1); opacity: 1; }
+      50%{ transform: scale(1.06); opacity: .88; }
+      100%{ transform: scale(1); opacity: 1; }
+    }
+
+    .details{
+      text-align:left;
+      flex:1;
+      min-width:0;
+      padding-right: 94px; /* เผื่อวงกลมขวา */
+      line-height: 1.55;
+      font-weight: 900;
+    }
+
+    .user{
+      white-space: nowrap;
+      overflow:hidden;
+      text-overflow: ellipsis;
+      font-size: 16px;
+      color: inherit;
+    }
+
+    /* ✅ คำว่า “ยอดถอน:” สีแดง */
+    .amount{
+      font-size: 18px;
+      font-weight: 1000;
+      color: #0a7a2e; /* สีตัวเลข/บาท (เขียวเข้มอ่านง่าย) */
+    }
+    .white .amount{ color:#0a7a2e; }
+    .mint .amount{ color:#0a7a2e; }
+
+    .amount-label{
+      color:#ff2b2b;      /* แดง */
+      font-weight:1000;
+      margin-right:6px;
+    }
+
+    .time{
+      font-size: 13px;
+      opacity: .85;
+      font-weight: 800;
+      color: inherit;
+    }
+
+    /* วงกลมรูปเกมขวา */
+    .game-badge{
+      position:absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 66px;
+      height: 66px;
+      border-radius: 999px;
+      overflow:hidden;
+      background: rgba(255,255,255,.18);
+      border: 3px solid rgba(255,255,255,.95);
+      box-shadow: 0 12px 26px rgba(0,0,0,.45);
+    }
+    .white .game-badge{
+      border-color: rgba(32,187,166,.65);
+      background: rgba(32,187,166,.10);
+    }
+
+    .game-badge img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      display:block;
+    }
+
+    @media (max-width:520px){
+      body{ padding:14px; }
+      .title{ font-size: 20px; }
+      .details{ padding-right: 86px; }
+      .game-badge{ width:60px; height:60px; }
+      .bank{ width:52px; height:52px; flex-basis:52px; }
+      .amount{ font-size: 17px; }
+    }
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>รายการถอนเงิน</title>
+
+  <style>
+    :root{
+      --mint1:#BFF7EA;
+      --mint2:#4FE1C8;
+      --mint3:#20BBA6;
+      --mint4:#119784;
+
+      --shadow: 0 18px 40px rgba(0,0,0,.55);
+    }
+
+    body{
+      margin:0;
+      padding:18px;
+      background:#000;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Thai", sans-serif;
+      text-align:center;
+      color:#fff;
+    }
+
+    .wrap{ max-width: 760px; margin: 0 auto; }
+
+    .title{
+      display:inline-block;
+      margin: 6px auto 16px;
+      padding: 10px 22px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, var(--mint1) 0%, var(--mint2) 55%, var(--mint4) 100%);
+      color:#0b1a16;
+      font-weight: 1000;
+      font-size: 22px;
+      letter-spacing: .2px;
+      border: 2px solid rgba(255,255,255,.95);
+      box-shadow:
+        0 10px 24px rgba(0,0,0,.55),
+        0 0 26px rgba(255,255,255,.35);
+    }
+
+    #transaction-container{
+      display:grid;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .card{
+      position: relative;
+      border-radius: 16px;
+      padding: 14px 14px;
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      animation: fadeIn .35s ease;
+      border: 2px solid rgba(255,255,255,.85);
+      backdrop-filter: blur(6px);
+    }
+
+    .mint{
+      background: linear-gradient(90deg, var(--mint1), var(--mint2), var(--mint3));
+      color:#0b1a16;
+      box-shadow:
+        0 0 12px rgba(255,255,255,.40),
+        0 0 26px rgba(255,255,255,.22),
+        var(--shadow);
+    }
+
+    .white{
+      background: linear-gradient(180deg, #ffffff, #f3f6f7);
+      color:#0b0f0f;
+      border-color: rgba(32,187,166,.55);
+      box-shadow:
+        0 0 10px rgba(255,255,255,.18),
+        var(--shadow);
+    }
+
+    @keyframes fadeIn{
+      from{ opacity:0; transform: translateY(10px); }
+      to{ opacity:1; transform: translateY(0); }
+    }
+
+    /* รูปธนาคารซ้าย */
+    .bank{
+      width: 56px;
+      height: 56px;
+      border-radius: 999px;
+      overflow:hidden;
+      flex: 0 0 56px;
+      background: rgba(255,255,255,.25);
+      border: 2px solid rgba(255,255,255,.95);
+      box-shadow: 0 10px 22px rgba(0,0,0,.28);
+      animation: pulse 1.6s infinite ease-in-out;
+    }
+    .white .bank{
+      border-color: rgba(32,187,166,.65);
+      background: rgba(32,187,166,.08);
+    }
+
+    .bank img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      display:block;
+    }
+
+    @keyframes pulse{
+      0%{ transform: scale(1); opacity: 1; }
+      50%{ transform: scale(1.06); opacity: .88; }
+      100%{ transform: scale(1); opacity: 1; }
+    }
+
+    .details{
+      text-align:left;
+      flex:1;
+      min-width:0;
+      line-height: 1.55;
+      font-weight: 900;
+      padding-right: 84px; /* เผื่อแท็กมุมขวา */
+    }
+
+    .user{
+      white-space: nowrap;
+      overflow:hidden;
+      text-overflow: ellipsis;
+      font-size: 16px;
+      color: inherit;
+    }
+
+    /* ยอดถอน: คำแดง */
+    .amount{
+      font-size: 18px;
+      font-weight: 1000;
+      color: #0a7a2e;
+    }
+    .amount-label{
+      color:#ff2b2b;
+      font-weight:1000;
+      margin-right:6px;
+    }
+
+    .time{
+      font-size: 13px;
+      opacity: .85;
+      font-weight: 800;
+      color: inherit;
+    }
+
+    /* ✅ แท็กหวยที่เล่น (มุมขวาบน) */
+    .lotto-tag{
+      position:absolute;
+      top: 10px;
+      right: 10px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 1000;
+      letter-spacing: .2px;
+      display:inline-flex;
+      align-items:center;
+      gap: 6px;
+      user-select:none;
+
+      border: 1px solid rgba(255,255,255,.65);
+      box-shadow:
+        0 8px 18px rgba(0,0,0,.28),
+        0 0 14px rgba(255,255,255,.10);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      white-space: nowrap;
+    }
+
+    /* สีแท็กให้เข้ากับแต่ละการ์ด */
+    .mint .lotto-tag{
+      background: rgba(255,255,255,.20);
+      color:#04110d;
+    }
+    .white .lotto-tag{
+      background: rgba(32,187,166,.12);
+      border-color: rgba(32,187,166,.55);
+      color:#063228;
+    }
+
+    .tag-dot{
+      width:8px; height:8px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #ffffff, rgba(255,255,255,.55));
+      box-shadow: 0 0 10px rgba(255,255,255,.35);
+      flex: 0 0 8px;
+    }
+    .white .tag-dot{
+      background: linear-gradient(180deg, var(--mint2), var(--mint4));
+      box-shadow: 0 0 10px rgba(32,187,166,.30);
+    }
+
+    @media (max-width:520px){
+      body{ padding:14px; }
+      .title{ font-size: 20px; }
+      .bank{ width:52px; height:52px; flex-basis:52px; }
+      .amount{ font-size: 17px; }
+      .details{ padding-right: 80px; }
+      .lotto-tag{ top: 9px; right: 9px; font-size: 11px; padding: 6px 9px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="title">รายการถอนเงิน</div>
+    <div id="transaction-container"></div>
+  </div>
+
+  <script>
+    const container = document.getElementById("transaction-container");
+
+    // รูปธนาคาร (ซ้าย)
+    const leftImages = [
+      "https://i.postimg.cc/0bYHxSpd/1.jpg",
+      "https://i.postimg.cc/vxR3w8TN/2.jpg",
+      "https://i.postimg.cc/SnVTYp1n/3.jpg",
+      "https://i.postimg.cc/gwTg4HWd/4.jpg",
+      "https://i.postimg.cc/yJdfFr2v/5.jpg",
+      "https://i.postimg.cc/nXnSLL28/6.jpg",
+      "https://i.postimg.cc/dkZ4fZsC/7.jpg"
+    ];
+
+    // ✅ รายการ “หวยที่เล่น” (แก้/เพิ่มได้)
+    const lottoTypes = ["ฮานอย", "ลาว", "หุ้นไทย","ดาวโจนส์", "ยี่กี", "มาเลย์"];
+
+    // ✅ ข้อมูลถอน (แก้ได้)
+    const withdrawals = [
+      { user: "xxxx939061xxxx", amount: 6308,   time: "15/01/2569 22:28:22" },
+      { user: "xxxx662739xxxx", amount: 7545,   time: "15/01/2569 22:28:19" },
+      { user: "xxxx523718xxxx", amount: 14668,  time: "15/01/2569 22:28:16" },
+      { user: "xxxx709571xxxx", amount: 45540,  time: "15/01/2569 22:28:13" },
+      { user: "xxxx130664xxxx", amount: 143560, time: "15/01/2569 22:28:10" },
+      { user: "xxxx111222xxxx", amount: 9800,   time: "15/01/2569 22:28:07" }
+    ];
+
+    const MAX_ITEMS = 4;
+    const INTERVAL_MS = 5000;
+    const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+
+    let toggle = false;
+
+    function createCard(item){
+      const card = document.createElement("div");
+      card.className = `card ${toggle ? "mint" : "white"}`;
+      toggle = !toggle;
+
+      // ✅ แท็กหวยที่เล่น
+      const tag = document.createElement("div");
+      tag.className = "lotto-tag";
+      tag.innerHTML = `<span class="tag-dot"></span> ${item.lotto || pick(lottoTypes)}`;
+      card.appendChild(tag);
+
+      // รูปธนาคารซ้าย
+      const bank = document.createElement("div");
+      bank.className = "bank";
+      const bankImg = document.createElement("img");
+      bankImg.src = item.bankImage || pick(leftImages);
+      bankImg.alt = "bank";
+      bank.appendChild(bankImg);
+
+      const details = document.createElement("div");
+      details.className = "details";
+
+      const user = document.createElement("div");
+      user.className = "user";
+      user.textContent = `ยูส: ${item.user || "-"}`;
+
+      const amount = document.createElement("div");
+      amount.className = "amount";
+      amount.innerHTML = `<span class="amount-label">ยอดถอน:</span> ${Number(item.amount || 0).toLocaleString("th-TH")} บาท`;
+
+      const time = document.createElement("div");
+      time.className = "time";
+      time.textContent = `วันที่: ${item.time || "-"}`;
+
+      details.appendChild(user);
+      details.appendChild(amount);
+      details.appendChild(time);
+
+      card.appendChild(bank);
+      card.appendChild(details);
+
+      return card;
+    }
+
+    function prependCard(item){
+      container.prepend(createCard(item));
+      while (container.children.length > MAX_ITEMS){
+        container.lastElementChild.remove();
+      }
+    }
+
+    // เปิดหน้ามาโชว์ 4 รายการแรกค้างไว้
+    let nextIndex = 0;
+    for (let k = 0; k < MAX_ITEMS; k++){
+      const item = withdrawals[nextIndex % withdrawals.length];
+      nextIndex++;
+      container.appendChild(createCard(item));
+    }
+
+    // แล้วค่อยมีรายการใหม่ขึ้นมาแทน
+    setInterval(() => {
+      const item = withdrawals[nextIndex % withdrawals.length];
+      nextIndex++;
+      prependCard(item);
+    }, INTERVAL_MS);
+  </script>
+</body>
+</html>
+
+<style>
+
+.glow-button{
+  position: relative;
+  overflow: hidden; /* สำคัญสำหรับแสงวิ่ง */
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+
+  /* โทนเขียวมิ้นท์ */
+  background: linear-gradient(180deg, #BFF7EA 0%, #4FE1C8 55%, #20BBA6 100%);
+  color:#07110e;
+
+  padding: 26px 34px;
+  font-size: 24px;
+  font-weight: 1000;
+  border-radius: 18px;
+  text-decoration:none;
+
+  border: 2px solid rgba(255,255,255,.90);
+  box-shadow:
+    0 10px 24px rgba(0,0,0,.45),
+    0 0 18px rgba(255,255,255,.22);
+
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+  width:95%;
+  max-width:720px;
+  margin: 18px auto;
+  box-sizing:border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.glow-button:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.55),
+    0 0 26px rgba(255,255,255,.28);
+}
+
+.glow-button:active{
+  transform: translateY(0);
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.45),
+    0 0 16px rgba(255,255,255,.20);
+}
+
+/* ✅ Shine วิ่งเบาๆ */
+.glow-button::after{
+  content:"";
+  position:absolute;
+  top:-40%;
+  left:-60%;
+  width: 55%;
+  height: 180%;
+  transform: rotate(18deg);
+  background: linear-gradient(90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,.45) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  opacity:.55;
+  animation: shine 3.2s ease-in-out infinite;
+  pointer-events:none;
+}
+
+@keyframes shine{
+  0%{ left:-60%; opacity:.0; }
+  15%{ opacity:.55; }
+  35%{ left:110%; opacity:0; }
+  100%{ left:110%; opacity:0; }
+}
+
+.icon-left{
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  filter: drop-shadow(0 0 8px rgba(255,255,255,.35));
+}
+
+@media (max-width:480px){
+  .glow-button{ padding:20px; font-size:20px; gap:10px; border-radius:16px; }
+  .icon-left{ width:26px; height:26px; flex-basis:26px; }
+}
+
+</style>
+<!-- ✅ แสดงรูปภาพ -->
+<img
+  src="https://i.postimg.cc/ZYdMYgbL/photo_2026_01_26_19_15_09.jpg"
+  alt="image"
+  class="show-img"
+/>
+
+<style>
+  .show-img{
+    width: min(720px, 100%);
+    height: auto;
+    display: block;
+    margin: 14px auto;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,.18);
+    box-shadow: 0 16px 40px rgba(0,0,0,.55);
+    background: rgba(255,255,255,.06);
+  }
+</style>
+
+<div id="uiTop" class="ui-top">↑</div>
+
+<style>
+.ui-top{
+  position:fixed; right:14px; bottom:96px; z-index:999999;
+  width:46px; height:46px; border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(0,0,0,.55);
+  border:1px solid rgba(255,255,255,.18);
+  color:#fff; font-weight:1000;
+  opacity:0; transform:translateY(10px);
+  pointer-events:none; transition:.2s;
+  backdrop-filter: blur(10px);
+}
+.ui-top.show{opacity:1;transform:translateY(0);pointer-events:auto}
+.ui-top:active{transform:translateY(0) scale(.98)}
+</style>
+
+<script>
+const b=document.getElementById("uiTop");
+function onS(){ window.scrollY>220?b.classList.add("show"):b.classList.remove("show"); }
+addEventListener("scroll", onS, {passive:true}); onS();
+b.onclick=()=>scrollTo({top:0,behavior:"smooth"});
+</script>
+<!-- ✅ Auto Logo Marquee (เลื่อนซ้ายตลอด + ลากนิ้วได้) -->
+<div class="logo-marquee" aria-label="brand marquee">
+  <div class="logo-track" id="logoTrack">
+    <!-- ชุดรูป (จะถูกโคลนอีกชุดด้วย JS เพื่อให้เลื่อนเนียน) -->
+    <a class="logo-item" href="https://m.nzt99.com/" target="_blank" rel="noopener">
+      <img src="https://i.postimg.cc/nhCcSBfC/PG.webp" alt="PG">
+    </a>
+    <a class="logo-item" href="https://m.nzt99.com/" target="_blank" rel="noopener">
+      <img src="https://i.postimg.cc/VsW6JzFw/dream_(1).webp" alt="dream">
+    </a>
+    <a class="logo-item" href="https://m.nzt99.com/" target="_blank" rel="noopener">
+      <img src="https://i.postimg.cc/7YPL7jBb/sexy.webp" alt="sexy">
+    </a>
+    <a class="logo-item" href="https://m.nzt99.com/" target="_blank" rel="noopener">
+      <img src="https://i.postimg.cc/J47hJSTn/Joker.webp" alt="Joker">
+    </a>
+    <a class="logo-item" href="https://m.nzt99.com/" target="_blank" rel="noopener">
+      <img src="https://i.postimg.cc/gkc0R1MP/microgaming.webp" alt="microgaming">
+    </a>
+    <a class="logo-item" href="https://m.nzt99.com/" target="_blank" rel="noopener">
+      <img src="https://i.postimg.cc/TY2PmBkR/Nextspin.webp" alt="Nextspin">
+    </a>
+    <a class="logo-item" href="https://m.nzt99.com/" target="_blank" rel="noopener">
+      <img src="https://i.postimg.cc/fTWbX1HQ/pragatic_play_(1).webp" alt="pragmatic play">
+    </a>
+    <a class="logo-item" href="https://m.nzt99.com/" target="_blank" rel="noopener">
+      <img src="https://i.postimg.cc/dtQ0dgWs/sa.webp" alt="sa">
+    </a>
+  </div>
+</div>
+
+<style>
+  .logo-marquee{
+    max-width: 760px;
+    margin: 14px auto;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,.14);
+    background: rgba(255,255,255,.06);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    padding: 12px 0;
+  }
+
+  .logo-track{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: max-content;
+    will-change: transform;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: pan-x;
+  }
+
+  .logo-item{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 132px;
+    height: 56px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,.14);
+    background: rgba(0,0,0,.18);
+    box-shadow: 0 16px 40px rgba(0,0,0,.35);
+    text-decoration: none;
+    flex: 0 0 auto;
+  }
+
+  .logo-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display:block;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,.08));
+  }
+
+  .logo-item:active{ transform: scale(.99); }
+
+  @media (max-width:480px){
+    .logo-item{ width: 116px; height: 52px; }
+  }
+</style>
+
+<script>
+(function(){
+  const track = document.getElementById("logoTrack");
+  if(!track) return;
+
+  // 1) โคลนชุดรูปอีกชุด เพื่อให้เลื่อนวนเนียน
+  const original = track.innerHTML;
+  track.insertAdjacentHTML("beforeend", original);
+
+  // 2) Auto-scroll ด้วย requestAnimationFrame
+  let x = 0;
+  let speed = 0.55; // ปรับความเร็ว (0.35 ช้า, 0.9 เร็ว)
+  let paused = false;
+
+  function getHalfWidth(){
+    // หลังโคลนแล้ว ความกว้างครึ่งหนึ่ง = ชุดรูปเดิม
+    return track.scrollWidth / 2;
+  }
+
+  function tick(){
+    if(!paused){
+      x -= speed;
+      const half = getHalfWidth();
+      if(Math.abs(x) >= half) x = 0;
+      track.style.transform = `translateX(${x}px)`;
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+
+  // 3) ลากนิ้ว/เมาส์เลื่อนได้ (คนเลื่อนเอง)
+  let isDown = false;
+  let startX = 0;
+  let startPos = 0;
+
+  const onDown = (clientX) => {
+    isDown = true;
+    paused = true;
+    startX = clientX;
+    startPos = x;
+  };
+
+  const onMove = (clientX) => {
+    if(!isDown) return;
+    const dx = clientX - startX;
+    x = startPos + dx;
+    const half = getHalfWidth();
+    // วนตำแหน่งไม่ให้หลุด
+    if(x > 0) x = x - half;
+    if(Math.abs(x) >= half) x = 0;
+    track.style.transform = `translateX(${x}px)`;
+  };
+
+  const onUp = () => {
+    if(!isDown) return;
+    isDown = false;
+    // กลับมาเลื่อนออโต้ต่อ
+    paused = false;
+  };
+
+  // เมาส์
+  track.addEventListener("mousedown", (e)=> onDown(e.clientX));
+  window.addEventListener("mousemove", (e)=> onMove(e.clientX));
+  window.addEventListener("mouseup", onUp);
+
+  // ทัช
+  track.addEventListener("touchstart", (e)=> onDown(e.touches[0].clientX), {passive:true});
+  track.addEventListener("touchmove", (e)=> onMove(e.touches[0].clientX), {passive:true});
+  track.addEventListener("touchend", onUp);
+
+  // 4) แตะค้าง/เอาเมาส์ชี้ให้หยุด (กันรำคาญ)
+  track.addEventListener("mouseenter", ()=> paused = true);
+  track.addEventListener("mouseleave", ()=> { if(!isDown) paused = false; });
+})();
+</script>
+
+<style id="bgFixFinal">
+/* ✅ ปิดตัวซ้อนเก่า ถ้ามี */
+html::before, html::after,
+body::before, body::after{
+  content: none !important;
+  display: none !important;
+}
+
+/* ✅ บังคับพื้นหลังใหม่ให้ชนะทุกตัว */
+html, body{
+  height: 100% !important;
+  min-height: 100% !important;
+}
+
+body{
+  margin: 0 !important;
+  background: none !important;
+  background-color: transparent !important;
+}
+
+/* ✅ พื้นหลังลายสวย (เลือกแบบนี้เป็นค่าเริ่มต้น) */
+body{
+  background:
+    repeating-linear-gradient(135deg,
+      rgba(255,255,255,.06) 0px,
+      rgba(255,255,255,.06) 10px,
+      rgba(0,0,0,0) 10px,
+      rgba(0,0,0,0) 22px
+    ),
+    radial-gradient(900px 520px at 12% -5%,
+      rgba(63,224,195,.22), rgba(0,0,0,0) 60%),
+    radial-gradient(700px 480px at 92% 8%,
+      rgba(255,255,255,.10), rgba(0,0,0,0) 58%),
+    linear-gradient(180deg,#071012 0%,#050b0c 45%,#050708 100%) !important;
+
+  background-attachment: fixed, fixed, fixed, fixed !important;
+  background-repeat: no-repeat !important;
+  background-size: auto, auto, auto, cover !important;
+}
+</style>
+<!-- ✅ 2 รูปแถวเดียว + กดดูเต็มจอ -->
+<div class="two-img-row" id="twoImgRow">
+  <button class="img-box" type="button" data-full="https://i.postimg.cc/XJwwL2np/photo-2026-01-28-12-32-43.jpg">
+    <img src="https://i.postimg.cc/XJwwL2np/photo-2026-01-28-12-32-43.jpg" alt="banner-1">
+  </button>
+
+  <button class="img-box" type="button" data-full="https://i.postimg.cc/zXYPyjvQ/ฝาก_3_ฟร_1_NZT99_แก_ไข.jpg">
+    <img src="https://i.postimg.cc/zXYPyjvQ/ฝาก_3_ฟร_1_NZT99_แก_ไข.jpg" alt="banner-2">
+  </button>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox-backdrop"></div>
+  <img class="lightbox-img" id="lightboxImg" alt="full">
+  <button class="lightbox-close" id="lightboxClose" type="button" aria-label="close">×</button>
+</div>
+
+<style>
+  .two-img-row{
+    max-width: 720px;
+    margin: 14px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 รูปแถวเดียว */
+    gap: 10px;
+  }
+
+  .img-box{
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 14px;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .img-box img{
+    width: 100%;
+    height: 210px;           /* ปรับได้ ถ้าอยากสูง/เตี้ย */
+    object-fit: cover;       /* ถ้าอยากเห็นเต็มรูปแบบไม่ตัด เปลี่ยนเป็น contain */
+    display: block;
+  }
+
+  /* มือถือจอเล็กมากให้รูปเตี้ยลงหน่อย */
+  @media (max-width: 420px){
+    .img-box img{ height: 160px; }
+    .two-img-row{ gap: 8px; }
+  }
+
+  /* Lightbox เต็มจอ */
+  .lightbox{
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+  }
+  .lightbox.show{ display: flex; }
+
+  .lightbox-backdrop{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.85);
+  }
+
+  .lightbox-img{
+    position: relative;
+    max-width: 92vw;
+    max-height: 92vh;
+    border-radius: 14px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.65);
+    background: #000;
+  }
+
+  .lightbox-close{
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,.25);
+    background: rgba(0,0,0,.45);
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1;
+  }
+</style>
+
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const closeBtn = document.getElementById("lightboxClose");
+
+  document.getElementById("twoImgRow").addEventListener("click", (e) => {
+    const btn = e.target.closest(".img-box");
+    if(!btn) return;
+    const src = btn.getAttribute("data-full");
+    lightboxImg.src = src;
+    lightbox.classList.add("show");
+    lightbox.setAttribute("aria-hidden", "false");
+  });
+
+  function closeLightbox(){
+    lightbox.classList.remove("show");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxImg.src = "";
+  }
+
+  closeBtn.addEventListener("click", closeLightbox);
+  lightbox.querySelector(".lightbox-backdrop").addEventListener("click", closeLightbox);
+
+  // ปิดด้วย ESC
+  document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape" && lightbox.classList.contains("show")) closeLightbox();
+  });
+</script>
+
+
+<style>
+  html, body{ height:auto !important; }
+  body{
+    overflow:auto !important;
+    padding-bottom: 120px !important; /* กันแถบล่างบัง */
+  }
+</style>
+
+<style>
+  html, body{ height:auto !important; }
+  body{
+    overflow:auto !important;
+    padding-bottom: 120px !important; /* กันแถบล่างบัง */
+  }
+</style>
+<title>NZT99 | สมัครอัตโนมัติ</title>
+<link rel="icon" href="https://i.postimg.cc/QNnJrzbN/Logo-NZT99.webp">
+<title>NZT99 | สมัครสมาชิก</title>
+
+<!-- ✅ รูป 2 รูปในแถวเดียว -->
+<div class="img-row">
+
+  <img class="zoom-img"
+       src="https://i.postimg.cc/m2W6Pwk7/ทายผลหวยร_ฐบาลไทย.png"
+       alt="img1">
+
+  <img class="zoom-img"
+       src="https://i.postimg.cc/Dy3YSg0t/ทายผลหวยลาวพ_ฒนา.png"
+       alt="img2">
+
+</div>
+
+<!-- ✅ Lightbox เต็มจอ -->
+<div class="lightbox" id="lightbox">
+  <span class="close-btn" id="closeBtn">✕</span>
+  <img id="lightboxImg">
+</div>
+
+<style>
+/* แถวรูป */
+.img-row{
+  max-width:720px;
+  margin:15px auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+/* รูป */
+.zoom-img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:14px;
+  cursor:pointer;
+  transition:0.25s;
+}
+
+.zoom-img:hover{
+  transform:scale(1.02);
+}
+
+/* Lightbox */
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.85);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:99999;
+}
+
+.lightbox img{
+  max-width:92%;
+  max-height:92%;
+  border-radius:16px;
+  box-shadow:0 0 40px rgba(255,255,255,0.25);
+}
+
+/* ปุ่มปิด */
+.close-btn{
+  position:absolute;
+  top:20px;
+  right:25px;
+  font-size:34px;
+  color:white;
+  cursor:pointer;
+  font-weight:bold;
+}
+</style>
+
+<script>
+const images = document.querySelectorAll(".zoom-img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const closeBtn = document.getElementById("closeBtn");
+
+/* คลิกที่รูป → ขยาย */
+images.forEach(img=>{
+  img.addEventListener("click",()=>{
+    lightbox.style.display="flex";
+    lightboxImg.src = img.src;
+  });
+});
+
+/* ปิดเมื่อกด X */
+closeBtn.addEventListener("click",()=>{
+  lightbox.style.display="none";
+});
+
+/* ปิดเมื่อคลิกพื้นหลัง */
+lightbox.addEventListener("click",(e)=>{
+  if(e.target === lightbox){
+    lightbox.style.display="none";
+  }
+});
+
+/* ปิดเมื่อกด ESC */
+document.addEventListener("keydown",(e)=>{
+  if(e.key==="Escape"){
+    lightbox.style.display="none";
+  }
+});
+</script>
+
